@@ -5,16 +5,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title></title>
+    <title>Дерево чекбоксов</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" />
 
     <!-- Project styles -->
-    <link href="css/project.css" type="text/css" rel="stylesheet/less" />
+    <link href="css/checkbox-tree.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="brand">Дерево чекбоксов</span>
+            </div>
+        </div>
+    </nav>
+    <section class="checkbox-tree container">
+        <h2>Пример</h2>
+        <div class="row">
+            <div class="span6">
+                <h3>Выбор услуг</h3>
+                <form class="form" action="">
+                    <div id="list-1">
+                        <ul class="unstyled">
+                            <li>
+                                <label class="checkbox"><input type="checkbox" name="service" value="1" />Парикмахерские услуги</label>
+                                <ul class="unstyled">
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="2" />Стрижка</label>
+                                        <ul class="unstyled">
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="3" />Женская</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="4" />Мужская</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="5" />Детская</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="6" />Окрашивание</label>
+                                        <ul class="unstyled">
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="7" />Окрашивание в один цвет</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="8" />Мелирование</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="9" />Тонирование</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="10" />Блондирование</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="11" />Колорирование</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="12" />Наращивание волос</label>
+                                        <ul class="unstyled">
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="13" />Капсульное</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="14" />Ленточное</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="15" />Ламинирование </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="16" />Косички</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="17" />Прически</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label class="checkbox"><input type="checkbox" name="service" value="18" />Макияж</label>
+                                <ul class="unstyled">
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="19" />Вечерний</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="20" />Дневной</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label class="checkbox"><input type="checkbox" name="service" value="21" />Свадебный стиль</label>
+                                <ul class="unstyled">
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="22" />Свадебный образ</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="23" />Свадебная прическа</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="24" />Свадебный макияж</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label class="checkbox"><input type="checkbox" name="service" value="25" />Маникюр и педикюр</label>
+                                <ul class="unstyled">
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="26" />Дизайн</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="27" />Наращивание ногтей</label>
+                                        <ul class="unstyled">
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="28" />Акрил</label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox"><input type="checkbox" name="service" value="29" />Гель</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label class="checkbox"><input type="checkbox" name="service" value="30" />Косметология</label>
+                                <ul class="unstyled">
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="31" />Чистка лица</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="32" />Депиляция </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="33" />Пилинг</label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox"><input type="checkbox" name="service" value="34" />Массаж</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <p class="muted">
+                    По мотивам http://stillion.ru
+                </p>
+            </div>
+        </div>
+        <h2>Использование</h2>
+        <div class="row">
+            <div class="span6">
+                <pre><code class="prettyprint lang-js js-code">new CheckboxTreeWidget({
+    el: document.getElementById('list-1')
+});</code></pre>
+            </div>
+        </div>
+    </section>
+
     <!-- Javascripts -->
     <script src="js/libs/require.js" data-main="js/init"></script>
     <script>
@@ -28,5 +180,6 @@
         });
     </script>
     <script src="js/libs/bootstrap-amd.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+/**
+ * Дерево чекбоксов
+ *
+ * @link        http://piumosso.github.com/tree
+ * @package     tree
+ * @author      Artem Golikov <art@futurecolors.ru>
+ */
+
+body {
+    padding-top: 60px;
+}
+.checkbox-tree ul {
+    margin-left: 20px;
+}
