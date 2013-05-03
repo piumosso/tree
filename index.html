@@ -156,12 +156,33 @@
                     По мотивам http://stillion.ru
                 </p>
             </div>
+            <div class="span6">
+                <h3>Выбор чего-то</h3>
+                <form class="form" action="">
+                    <div id="list-2"></div>
+                </form>
+            </div>
         </div>
         <h2>Использование</h2>
         <div class="row">
             <div class="span6">
                 <pre><code class="prettyprint lang-js js-code">new CheckboxTreeWidget({
     el: document.getElementById('list-1')
+});</code></pre>
+            </div>
+            <div class="span6">
+                <pre><code class="prettyprint lang-js js-code">new CheckboxTreeWidget({
+    el: document.getElementById('list-2'),
+    data: [
+        {id: 1, title: '1', parentId: null},
+        {id: 2, title: '2', parentId: null},
+        {id: 3, title: '3', parentId: 1},
+        {id: 4, title: '4', parentId: 1},
+        {id: 5, title: '5', parentId: 1},
+        {id: 6, title: '6', parentId: 3},
+        {id: 7, title: '7', parentId: 3}
+    ],
+    checked: [2, 7]
 });</code></pre>
             </div>
         </div>

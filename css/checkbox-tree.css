@@ -12,3 +12,6 @@ body {
 .checkbox-tree ul {
     margin-left: 20px;
 }
+label {
+    display: inline-block;
+}
