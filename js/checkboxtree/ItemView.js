@@ -13,10 +13,14 @@ define('checkboxtree/ItemView', [
         },
 
         initialize: function(){
+            var $checkbox = this.$(':checkbox');
+
             this.model = new ItemModel({
-                isChecked: this.$(':checkbox').prop('checked')
+                isChecked: $checkbox.prop('checked'),
+                amount: $checkbox.data('amount') || 0
             });
             this.model.on('change:isChecked', this.onIsCheckedChanged, this);
+            this.model.on('change:cost', this.onCostChanged, this);
 
             this.initializeNestedList();
         },
@@ -42,7 +46,20 @@ define('checkboxtree/ItemView', [
         },
 
         onIsCheckedChanged: function(){
-            this.$('> label :checkbox').prop('checked', this.model.get('isChecked'));
+            var isChecked = this.model.get('isChecked');
+
+            this.$('> label :checkbox').prop('checked', isChecked);
+            this.$('> label').toggleClass('checked', isChecked);
+        },
+
+        onCostChanged: function(){
+            var cost = this.model.get('cost');
+
+            this
+                .$('> label .js-cost')
+                .toggle(cost > 0)
+                .find('.js-val')
+                .html(cost);
         }
     });
 });

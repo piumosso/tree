@@ -12,3 +12,24 @@ body {
 .checkbox-tree ul {
     margin-left: 20px;
 }
+.amount {
+    text-shadow: none;
+    background: #f4f4f4;
+    color: #bbb;
+}
+.checked .amount {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background: #999;
+    color: white;
+}
+.cost {
+    display: none;
+    margin-left: .5em;
+    font-size: 12px;
+    font-style: italic;
+    color: #999;
+}
+.reduction {
+    display: block;
+    margin-top: -5px;
+}

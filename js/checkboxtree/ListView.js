@@ -11,7 +11,9 @@ define('checkboxtree/ListView', [
         initialize: function(){
             var that = this;
 
-            this.collection = new ListCollection();
+            this.collection = new ListCollection({
+                reduction: this.$el.data('reduction') || 0
+            });
             this.$('> li').each(function(){
                 var itemView = new ItemView({
                     el: this
