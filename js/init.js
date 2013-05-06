@@ -6,7 +6,7 @@ require([
     CheckboxTreeWidget
 ){
     $(function(){
-        // Выполняем код примеров
+        // Выполняем код инициализации примера
         $('.js-code').each(function(){
             var $code = $(this);
 

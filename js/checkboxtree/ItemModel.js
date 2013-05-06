@@ -13,6 +13,10 @@ define('checkboxtree/ItemModel', ['backbone'], function(Backbone){
             this.on('change:isChecked', this.actualizeCost, this);
         },
 
+        /**
+         * Связывание модели и коллекции вложенных элементов
+         * @param colection
+         */
         setNestedCollection: function(colection){
             this.nestedCollection = colection;
             this.nestedCollection.on('change:isChecked', this.onNestedCollectionChanged, this);
@@ -23,6 +27,7 @@ define('checkboxtree/ItemModel', ['backbone'], function(Backbone){
             var isChecked = this.get('isChecked');
 
             if (this.nestedCollection) {
+                // При выделении родителя выделяем всех потомков
                 if (!isChecked || !this.nestedCollection.isAnyChecked()) {
                     this.nestedCollection.each(function(model){
                         model.set({isChecked: isChecked});
@@ -33,12 +38,16 @@ define('checkboxtree/ItemModel', ['backbone'], function(Backbone){
 
         onNestedCollectionChanged: function(){
             if (this.nestedCollection) {
+                // Если выбран хотя бы один потомок, выделяем родителя
                 this.set({
                     isChecked: this.nestedCollection.isAnyChecked()
                 });
             }
         },
 
+        /**
+         * Актуализация стоимости услуги и её выбранных подуслуг
+         */
         actualizeCost: function(){
             var cost;
             

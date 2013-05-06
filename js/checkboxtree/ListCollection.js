@@ -18,6 +18,10 @@ define('checkboxtree/ListCollection', [
             }
         },
 
+        /**
+         * Подсчёт суммы по услугам с учётом возможной скидки
+         * @returns {*}
+         */
         getCost: function(){
             var costSum;
 

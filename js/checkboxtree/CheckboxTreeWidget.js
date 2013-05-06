@@ -13,6 +13,8 @@ define('checkboxtree/CheckboxTreeWidget', [
                 this.rootList = new ListView({
                     el: $list
                 });
+
+                // Отображение суммы по всем выбранным услугам
                 this.displayTotalCost();
                 this.rootList.collection.on('change:cost', this.displayTotalCost, this);
             }
