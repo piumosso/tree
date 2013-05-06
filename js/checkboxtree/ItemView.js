@@ -7,6 +7,8 @@ define('checkboxtree/ItemView', [
     Backbone,
     ItemModel
 ){
+    var ListView;
+
     return Backbone.View.extend({
         events: {
             'change > label :checkbox': 'onCheckboxChanged'
@@ -22,20 +24,21 @@ define('checkboxtree/ItemView', [
             this.model.on('change:isChecked', this.onIsCheckedChanged, this);
             this.model.on('change:cost', this.onCostChanged, this);
 
+            ListView = require('checkboxtree/ListView');
             this.initializeNestedList();
+
+            this.model.actualizeCost();
+            this.onIsCheckedChanged();
         },
 
         initializeNestedList: function(){
-            var $nestedList = this.$('> ul'),
-                that = this;
+            var $nestedList = this.$('> ul');
 
             if ($nestedList.length) {
-                require(['checkboxtree/ListView'], function(ListView){
-                    var nestedListView = new ListView({
-                        el: $nestedList
-                    });
-                    that.model.setNestedCollection(nestedListView.collection);
+                var nestedListView = new ListView({
+                    el: $nestedList
                 });
+                this.model.setNestedCollection(nestedListView.collection);
             }
         },
 
