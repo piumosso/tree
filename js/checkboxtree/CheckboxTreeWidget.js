@@ -10,10 +10,18 @@ define('checkboxtree/CheckboxTreeWidget', [
             var $list = this.$('> ul');
 
             if ($list.length) {
-                new ListView({
+                this.rootList = new ListView({
                     el: $list
                 });
+                this.displayTotalCost();
+                this.rootList.collection.on('change:cost', this.displayTotalCost, this);
             }
+        },
+
+        displayTotalCost: function(){
+            var totalCost = this.rootList.collection.getCost();
+
+            this.$('.js-total').html(totalCost);
         }
     });
 });
