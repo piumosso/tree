@@ -8,7 +8,9 @@ define('checkboxtree/ListCollection', [
     return Backbone.Collection.extend({
         model: ItemModel,
 
-        initialize: function(options){
+        initialize: function(data, options){
+            Backbone.Collection.prototype.initialize.apply(this, arguments);
+
             this.reduction = 0;
 
             if (options && options.reduction) {

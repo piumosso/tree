@@ -12,6 +12,9 @@ body {
 .checkbox-tree ul {
     margin-left: 20px;
 }
+.checkbox-tree .checkbox:hover {
+    background: #f8f8f2;
+}
 .amount {
     text-shadow: none;
     background: #f4f4f4;
